@@ -1,0 +1,24 @@
+{
+  "name": "com.rms.unityresourcegeneration",
+  "version": "1.0.1",
+  "displayName": "Unity Resource Constants Generation",
+  "description": "A Unity editor tool that generates constants for assets in Resources folders.",
+  "unity": "2020.3",
+  "author": {
+    "name": "RemoteMS",
+    "url": "https://github.com/RemoteMS"
+  },
+  "keywords": [
+    "unity",
+    "editor",
+    "resources",
+    "generator",
+    "statics"
+  ],
+  "dependencies": {},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RemoteMS/Unity-Resources-Constants-Generator.git"
+  }
+}
