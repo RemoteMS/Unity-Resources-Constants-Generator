@@ -145,11 +145,6 @@ namespace Editor.Generators
 
         private void GenerateConstants()
         {
-            var extensions = _fileExtensions.Split(',')
-                .Select(ext => ext.Trim())
-                .Where(ext => !string.IsNullOrEmpty(ext))
-                .ToArray();
-
             if (string.IsNullOrWhiteSpace(_className))
             {
                 Debug.LogError("Class name cannot be empty. Using default name: " +
@@ -157,7 +152,7 @@ namespace Editor.Generators
                 _className = ResourcesConstantsGenerator.DefaultValues.ClassName;
             }
 
-            ResourcesConstantsGenerator.Generate(_outputPath, extensions, _includeSubfolders, _className);
+            ResourcesConstantsGenerator.Generate(_outputPath, _fileExtensions, _includeSubfolders, _className);
         }
 
         private void ResetSettings()
@@ -250,11 +245,6 @@ namespace Editor.Generators
             Debug.Log(
                 $"OnPostprocessAllAssets: AutoGenerateOnChange={autoGenerateOnChange}, OpenWindowOnFileAdd={openWindowOnFileAdd}");
 
-            var extensions = fileExtensions.Split(',')
-                .Select(ext => ext.Trim())
-                .Where(ext => !string.IsNullOrEmpty(ext))
-                .ToArray();
-
             // Check the changes in the Resources folders
             var hasChangesInResources = false;
 
@@ -337,7 +327,7 @@ namespace Editor.Generators
             if (hasChangesInResources && autoGenerateOnChange)
             {
                 Debug.Log("Changes detected in Resources folder. Generating constants...");
-                ResourcesConstantsGenerator.Generate(outputPath, extensions, includeSubfolders, className);
+                ResourcesConstantsGenerator.Generate(outputPath, fileExtensions, includeSubfolders, className);
             }
         }
 
