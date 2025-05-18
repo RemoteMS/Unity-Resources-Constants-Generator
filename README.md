@@ -9,7 +9,7 @@ A Unity editor tool that generates constants for assets in Resources folders.
 3. Enter: 
 
 ```
-https://github.com/RemoteMS/Unity-Resources-Constants-Generator.git?path=/src/Unity-Resources-Constants-Generator#1.0.2
+https://github.com/RemoteMS/Unity-Resources-Constants-Generator.git?path=/src/Unity-Resources-Constants-Generator#1.0.3
 ```
 
 4. Click `Add`.
@@ -19,7 +19,7 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 ```json
 {
     "dependencies": {
-      "com.rms.unityresourcegeneration": "https://github.com/RemoteMS/Unity-Resources-Constants-Generator.git?path=/src/Unity-Resources-Constants-Generator#1.0.2"
+      "com.rms.unityresourcegeneration": "https://github.com/RemoteMS/Unity-Resources-Constants-Generator.git?path=/src/Unity-Resources-Constants-Generator#1.0.3"
     }
 }
 ```
